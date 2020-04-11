@@ -1,0 +1,14 @@
+version: '3'
+services:
+  redis:
+    image: redis:5.0.0-alpine
+    container_name: redis
+    command: sh -c "redis-server /etc/redis/redis.conf --requirepass root" 
+    ports:
+      - "6379:6379"
+    volumes:
+      - $HOME/data/redis/conf/redis.conf:/etc/redis/redis.conf
+      - $HOME/data/redis/data:/data
+      - $HOME/data/redis/log:/var/log
+    environment:
+      - TZ=Asia/Shanghai
