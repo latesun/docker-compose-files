@@ -7,5 +7,5 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - $HOME/data/nginx/conf.d/nginx.conf:/etc/nginx/nginx.conf
+      - $HOME/data/nginx/conf.d/nginx.conf:/etc/nginx/conf.d/default.conf
       - $HOME/data/nginx/log:/var/log/nginx

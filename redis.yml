@@ -12,3 +12,4 @@ services:
       - $HOME/data/redis/log:/var/log
     environment:
       - TZ=Asia/Shanghai
+    restart: always
